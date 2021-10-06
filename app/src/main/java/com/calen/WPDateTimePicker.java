@@ -1,4 +1,4 @@
-package com.example.datepicker;
+package com.calen;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -17,10 +17,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Month;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;

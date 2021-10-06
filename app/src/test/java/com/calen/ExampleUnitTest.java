@@ -1,4 +1,4 @@
-package com.example.datepicker;
+package com.calen;
 
 import org.junit.Test;
 

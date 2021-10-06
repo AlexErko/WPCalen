@@ -1,4 +1,4 @@
-package com.example.datepicker;
+package com.calen;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
 import java.util.Calendar;
-import java.util.Locale;
 
 public class WPRange extends androidx.appcompat.widget.AppCompatTextView implements WPRangePicker.WpOnRangeChanged, DialogInterface.OnDismissListener {
 

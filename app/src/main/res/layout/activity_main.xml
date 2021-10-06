@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
 
-    <com.example.datepicker.WPDateTime
+    <com.calen.WPDateTime
         android:id="@+id/asdas"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.286" />
 
-    <com.example.datepicker.WPDate
+    <com.calen.WPDate
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:gravity="center"
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.datepicker.WPRange
+    <com.calen.WPRange
         android:id="@+id/Sasda"
         android:layout_width="match_parent"
         android:layout_height="60dp"
