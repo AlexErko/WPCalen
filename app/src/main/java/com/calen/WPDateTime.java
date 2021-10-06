@@ -37,7 +37,6 @@ public class WPDateTime extends androidx.appcompat.widget.AppCompatTextView impl
         wpDateTimePicker = new WPDateTimePicker(getContext());
         builder.setView(wpDateTimePicker);
         wpDateTimePicker.setOnDateChanged(this);
-        wpDateTimePicker.setCurrentTime(20, 59);
         dialog = builder.create();
         dialog.setOnDismissListener(this);
         setTextOn = true;
