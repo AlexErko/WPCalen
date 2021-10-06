@@ -89,6 +89,9 @@ public class WPDateTime extends androidx.appcompat.widget.AppCompatTextView impl
         this.onDateChanged = onDateChanged;
     }
 
+    public String getTime() {
+        return wpDateTimePicker.getStringTime();
+    }
 
 
     public void setLocale(Locale locale) {
