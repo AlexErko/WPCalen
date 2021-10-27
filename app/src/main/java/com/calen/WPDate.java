@@ -16,6 +16,7 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
     AlertDialog dialog;
     WPDatePicker wpDatePicker;
     private WPDatePicker.WpOnDateChanged onDateChanged;
+    private boolean printFullDate = true;
     private boolean setTextOn = false;
     private boolean inClass = false;
     private boolean autoClose = true;
@@ -46,8 +47,11 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
         wpDatePicker.setCurrentDate(getText().toString());
         inClass = true;
         setTextOn = true;
-        setText(wpDatePicker.getFullDate());
-
+        if (printFullDate) {
+            setText(wpDatePicker.getFullDate());
+        }else{
+            setText(wpDatePicker.getStringDate());
+        }
         this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +89,11 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
                 wpDatePicker.setCurrentDate(text.toString());
                 inClass = true;
                 setTextOn = true;
-                setText(wpDatePicker.getFullDate());
+                if (printFullDate) {
+                    setText(wpDatePicker.getFullDate());
+                }else{
+                    setText(wpDatePicker.getStringDate());
+                }
             }
 
 
@@ -105,8 +113,11 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
         }
         inClass = true;
         setTextOn = true;
-        setText(wpDatePicker.getFullDate());
-
+        if (printFullDate) {
+            setText(wpDatePicker.getFullDate());
+        }else{
+            setText(wpDatePicker.getStringDate());
+        }
         if (autoClose) {
             dialog.dismiss();
         }
@@ -115,8 +126,11 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
         wpDatePicker.setCurrentDate(day, month, year);
         inClass = true;
         setTextOn = true;
-        setText(wpDatePicker.getFullDate());
-
+        if (printFullDate) {
+            setText(wpDatePicker.getFullDate());
+        }else{
+            setText(wpDatePicker.getStringDate());
+        }
     }
     public String getStringDate() {
         return wpDatePicker.getStringDate();
@@ -131,15 +145,22 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
         wpDatePicker.setCurrentDate(date);
         inClass = true;
         setTextOn = true;
-        setText(wpDatePicker.getFullDate());
-
+        if (printFullDate) {
+            setText(wpDatePicker.getFullDate());
+        }else{
+            setText(wpDatePicker.getStringDate());
+        }
     }
 
     public void setDate(Calendar date) {
         wpDatePicker.setCurrentDate(date);
         inClass = true;
         setTextOn = true;
-        setText(wpDatePicker.getFullDate());
+        if (printFullDate) {
+            setText(wpDatePicker.getFullDate());
+        }else{
+            setText(wpDatePicker.getStringDate());
+        }
     }
 
     public void setOnDateChanged(WPDatePicker.WpOnDateChanged onDateChanged) {
@@ -157,10 +178,18 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
         if (wpDatePicker != null) {
             inClass = true;
             setTextOn = true;
-            setText(wpDatePicker.getFullDate());
+            if (printFullDate) {
+                setText(wpDatePicker.getFullDate());
+            }else{
+                setText(wpDatePicker.getStringDate());
+            }
 
         }
 
 
+    }
+
+    public void setPrintFullDate(boolean printFullDate) {
+        this.printFullDate = printFullDate;
     }
 }
