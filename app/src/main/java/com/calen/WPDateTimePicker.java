@@ -563,6 +563,8 @@ public class WPDateTimePicker extends LinearLayout implements NumberPicker.OnVal
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
 
         } catch (ParseException e) {
             e.printStackTrace();
@@ -572,6 +574,8 @@ public class WPDateTimePicker extends LinearLayout implements NumberPicker.OnVal
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -580,6 +584,8 @@ public class WPDateTimePicker extends LinearLayout implements NumberPicker.OnVal
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -588,6 +594,8 @@ public class WPDateTimePicker extends LinearLayout implements NumberPicker.OnVal
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }

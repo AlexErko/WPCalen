@@ -452,7 +452,7 @@ public class WPDatePicker extends LinearLayout {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
-
+            return;
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -461,6 +461,8 @@ public class WPDatePicker extends LinearLayout {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -469,6 +471,8 @@ public class WPDatePicker extends LinearLayout {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -477,6 +481,8 @@ public class WPDatePicker extends LinearLayout {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }

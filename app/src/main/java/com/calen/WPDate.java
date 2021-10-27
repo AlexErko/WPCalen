@@ -59,7 +59,6 @@ public class WPDate extends androidx.appcompat.widget.AppCompatTextView implemen
 
             }
         });
-
     }
 
     @Override

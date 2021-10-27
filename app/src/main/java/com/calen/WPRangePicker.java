@@ -611,6 +611,8 @@ public class WPRangePicker extends LinearLayout {
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
             secondClick = true;
+            return;
+
 
         } catch (ParseException e) {
             e.printStackTrace();
@@ -621,6 +623,8 @@ public class WPRangePicker extends LinearLayout {
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
             secondClick = true;
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -630,6 +634,8 @@ public class WPRangePicker extends LinearLayout {
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
             secondClick = true;
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -639,6 +645,8 @@ public class WPRangePicker extends LinearLayout {
             showedDate.setTime(dateFormat.parse(date));
             updateDates();
             secondClick = true;
+            return;
+
         } catch (ParseException e) {
             e.printStackTrace();
         }
