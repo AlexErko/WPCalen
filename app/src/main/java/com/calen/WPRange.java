@@ -32,7 +32,7 @@ public class WPRange extends androidx.appcompat.widget.AppCompatTextView impleme
         super(context, attrs);
         init();
     }
-
+    public WPRangePicker getWpRangePicker(){return wpRangePicker;}
     void init() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         wpRangePicker = new WPRangePicker(getContext());

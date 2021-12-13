@@ -23,6 +23,7 @@ import java.util.Locale;
 public class WPRangePicker extends LinearLayout {
 
     private int mainColor = Color.parseColor("#fb8c00");
+
     private Locale locale;
     private Calendar startDate;
     private Calendar endDate;
@@ -52,6 +53,10 @@ public class WPRangePicker extends LinearLayout {
         init();
     }
 
+
+    public TextView getTitleView(){return dateTitle;}
+    public LinearLayout getDoneButton(){return doneButton;}
+    public TextView getTextViewDone(){return textViewDone;}
 
     void init() {
         Context context = getContext();
@@ -533,6 +538,8 @@ public class WPRangePicker extends LinearLayout {
 
 
     }
+
+
     public void setEndDate(Calendar date) {
         endDate.setTime(date.getTime());
         showedDate.setTime(date.getTime());
