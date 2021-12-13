@@ -2,11 +2,15 @@ package com.calen;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
 
 import java.util.Calendar;
 
@@ -40,11 +44,14 @@ public class WPRange extends androidx.appcompat.widget.AppCompatTextView impleme
         builder.setView(wpRangePicker);
 
         dialog = builder.create();
+
         dialog.setOnDismissListener(this);
         this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.show();
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
             }
         });

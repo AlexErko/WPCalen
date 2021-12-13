@@ -23,6 +23,10 @@ import java.util.Locale;
 public class WPRangePicker extends LinearLayout {
 
     private int mainColor = Color.parseColor("#fb8c00");
+    private int filledColor = Color.parseColor("#B3fb8c00");
+    private int activeDateColor = Color.BLACK;
+    private int sleepDateColor = Color.GRAY;
+    private int selectedDateColor = Color.WHITE;
 
     private Locale locale;
     private Calendar startDate;
@@ -57,6 +61,11 @@ public class WPRangePicker extends LinearLayout {
     public TextView getTitleView(){return dateTitle;}
     public LinearLayout getDoneButton(){return doneButton;}
     public TextView getTextViewDone(){return textViewDone;}
+    public TextView getMonthTitle(){return monthTitle;}
+    public LinearLayout getNextPageBut(){return backPageBut;}
+    public LinearLayout getBeforePageBut(){return nextPageBut;}
+    public ArrayList<TextView> getWeekDay(){return weekDay;}
+    public ArrayList<TextView> getDays(){return days;}
 
     void init() {
         Context context = getContext();
@@ -93,7 +102,6 @@ public class WPRangePicker extends LinearLayout {
         monthParam.topMargin = pxFromDp(context, 5);
         monthParam.bottomMargin = pxFromDp(context, 5);
         monthSection.setLayoutParams(monthParam);
-        monthSection.setBackgroundColor(Color.WHITE);
         monthSection.setOrientation(HORIZONTAL);
         addView(monthSection);
 
@@ -108,6 +116,8 @@ public class WPRangePicker extends LinearLayout {
         backParam.setMargins(pxFromDp(context, 5), pxFromDp(context, 5), pxFromDp(context, 5), pxFromDp(context, 5));
         backPageImage.setLayoutParams(backParam);
         backPageImage.setBackgroundResource(R.drawable.image_next_page);
+        backPageImage.setColorFilter(activeDateColor);
+
         backPageImage.setRotation(180);
         backPageBut.addView(backPageImage);
         monthSection.addView(backPageBut);
@@ -116,7 +126,7 @@ public class WPRangePicker extends LinearLayout {
         monthTitle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1));
         monthTitle.setTextSize(pxFromDp(context, 7));
         monthTitle.setGravity(Gravity.CENTER);
-        monthTitle.setTextColor(Color.BLACK);
+        monthTitle.setTextColor(activeDateColor);
 
         monthSection.addView(monthTitle);
 
@@ -131,7 +141,10 @@ public class WPRangePicker extends LinearLayout {
         LinearLayout.LayoutParams nextParam = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         nextParam.setMargins(pxFromDp(context, 5), pxFromDp(context, 5), pxFromDp(context, 5), pxFromDp(context, 5));
         nextPageImage.setLayoutParams(nextParam);
+
         nextPageImage.setBackgroundResource(R.drawable.image_next_page);
+        nextPageImage.setColorFilter(activeDateColor);
+
         nextPageBut.addView(nextPageImage);
         monthSection.addView(nextPageBut);
 
@@ -145,7 +158,6 @@ public class WPRangePicker extends LinearLayout {
         weekParam.leftMargin = pxFromDp(context, 10);
         weekParam.rightMargin = pxFromDp(context, 10);
         weekSection.setLayoutParams(weekParam);
-        weekSection.setBackgroundColor(Color.WHITE);
         addView(weekSection);
 
         weekDay.clear();
@@ -154,7 +166,7 @@ public class WPRangePicker extends LinearLayout {
             weekDayTitle.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1));
             weekDayTitle.setTextSize(pxFromDp(context, 6));
             weekDayTitle.setGravity(Gravity.CENTER);
-            weekDayTitle.setTextColor(Color.BLACK);
+            weekDayTitle.setTextColor(selectedDateColor);
 
             weekDay.add(weekDayTitle);
             weekSection.addView(weekDayTitle);
@@ -181,7 +193,7 @@ public class WPRangePicker extends LinearLayout {
             dayTitle.setLayoutParams(pa);
             dayTitle.setTextSize(pxFromDp(context, 6));
             dayTitle.setGravity(Gravity.CENTER);
-            dayTitle.setTextColor(Color.BLACK);
+            dayTitle.setTextColor(selectedDateColor);
 
             dayTitle.setText(i + "");
             daysLine.addView(dayTitle);
@@ -204,7 +216,7 @@ public class WPRangePicker extends LinearLayout {
         textViewDone.setTypeface(textViewDone.getTypeface(), Typeface.BOLD);
         textViewDone.setTextSize(pxFromDp(context, 9));
         textViewDone.setGravity(Gravity.CENTER);
-        textViewDone.setTextColor(Color.WHITE);
+        textViewDone.setTextColor(activeDateColor);
         doneButton.addView(textViewDone);
 
 
@@ -529,7 +541,7 @@ public class WPRangePicker extends LinearLayout {
             Integer currentD = new Integer(cDate.replace("-", ""));
 
             if (currentD > startD && currentD < endD) {
-                days.get(i).setBackgroundColor(Color.parseColor("#B3fb8c00"));
+                days.get(i).setBackgroundColor(filledColor);
                 days.get(i).setTextColor(Color.WHITE);
             }
 
