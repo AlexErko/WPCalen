@@ -67,6 +67,25 @@ public class WPRangePicker extends LinearLayout {
     public ArrayList<TextView> getWeekDay(){return weekDay;}
     public ArrayList<TextView> getDays(){return days;}
 
+    public void setFilledColor(int filledColor) {
+        this.filledColor = filledColor; }
+
+    public void setMainColor(int mainColor) {
+        this.mainColor = mainColor;
+    }
+
+    public void setActiveDateColor(int activeDateColor) {
+        this.activeDateColor = activeDateColor;
+    }
+
+    public void setSelectedDateColor(int selectedDateColor) {
+        this.selectedDateColor = selectedDateColor;
+    }
+
+    public void setSleepDateColor(int sleepDateColor) {
+        this.sleepDateColor = sleepDateColor;
+    }
+
     void init() {
         Context context = getContext();
         locale = context.getResources().getConfiguration().locale;

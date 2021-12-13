@@ -39,6 +39,7 @@ public class WPRange extends androidx.appcompat.widget.AppCompatTextView impleme
     public WPRangePicker getWpRangePicker(){return wpRangePicker;}
     void init() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
         wpRangePicker = new WPRangePicker(getContext());
         wpRangePicker.setOnDateChanged(this);
         builder.setView(wpRangePicker);
@@ -50,8 +51,6 @@ public class WPRange extends androidx.appcompat.widget.AppCompatTextView impleme
             @Override
             public void onClick(View v) {
                 dialog.show();
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
             }
         });
