@@ -354,7 +354,9 @@ public class WPDatePicker extends LinearLayout {
         currentDate.set(Calendar.DAY_OF_MONTH, day);
         currentDate.set(Calendar.YEAR, year);
         currentDate.set(Calendar.MONTH, month);
+        showedDate = currentDate;
         showedDate.setTime(currentDate.getTime());
+        setLocale(locale);
         updateDates();
 
     }
