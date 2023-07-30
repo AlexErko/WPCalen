@@ -445,6 +445,7 @@ public class WPDatePicker extends LinearLayout {
     public void setCurrentDate(Calendar date) {
         currentDate.setTime(date.getTime());
         showedDate.setTime(date.getTime());
+        setLocale(locale);
         updateDates();
 
     }
@@ -453,6 +454,7 @@ public class WPDatePicker extends LinearLayout {
         try {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
+            setLocale(locale);
             updateDates();
             return;
         } catch (ParseException e) {
@@ -462,6 +464,7 @@ public class WPDatePicker extends LinearLayout {
         try {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
+            setLocale(locale);
             updateDates();
             return;
 
@@ -472,6 +475,7 @@ public class WPDatePicker extends LinearLayout {
         try {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
+            setLocale(locale);
             updateDates();
             return;
 
@@ -482,6 +486,7 @@ public class WPDatePicker extends LinearLayout {
         try {
             currentDate.setTime(dateFormat.parse(date));
             showedDate.setTime(dateFormat.parse(date));
+            setLocale(locale);
             updateDates();
             return;
 
